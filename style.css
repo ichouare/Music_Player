@@ -91,16 +91,26 @@ body{
 .container .info .progress .progress_value{
     display: block;
     height: 4px;
+    border: none;
     border-radius: 15px;
     background-color: var(--cl-medium--white);
+    color: var(--cl-red);
+    padding: 0;
     /* width: 100%; */
 } 
-.container .info .progress   .progress_value span{
+.container .info .progress   .progress_value input{
+    -webkit-appearance: none;
     display:block;
-    width: 40%;
+    width: 100%;
     height: 4px;
-    background-color: var(--cl-red);
     border-radius:   15px;
+    border: none;
+    cursor: pointer;
+}
+.container .info .progress   .progress_value input::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    background-color: var(--cl-red);
+    
 }
 
 .container .info .controls{
@@ -108,14 +118,38 @@ body{
     display: flex;
     flex-direction: row;
     align-items: center;
+    border-radius:   15px;
     justify-content: space-evenly;
+
 }
 
-.container .info .controls svg:nth-child(2){
+.container .info .controls .play_pause {
     background-color: var(--cl-red);
     border-radius: 100%;
     width: 40px;
     height: 40px;
     aspect-ratio: 1 / 2;
-    /* display: block; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #FFF;
+}
+.container .info .controls .play_pause svg{
+
+    /* background-color: red; */
+    width: 15px;
+    color: var(--cl-medium--white);
+
+    text-align: center;
+}
+
+
+/* .container .info .controls .play_pause svg:nth-child(2){
+    display: none;
+} */
+
+
+.remove{
+    display: none;
+    
 }
